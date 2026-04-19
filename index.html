@@ -833,12 +833,12 @@
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
 
-          // Animate skill bars
+          
           entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
             if (bar.dataset.width) bar.style.width = bar.dataset.width + '%';
           });
 
-          // Animate counters
+       
           entry.target.querySelectorAll('[data-target]').forEach(num => {
             const target = parseInt(num.dataset.target);
             let current = 0;
