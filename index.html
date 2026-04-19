@@ -27,33 +27,10 @@
       color: #e2eaf4;
       overflow-x: hidden;
       -webkit-tap-highlight-color: transparent;
+      cursor: default;
     }
 
-    /* Custom Cursor — только для десктопа */
-    @media (hover: hover) and (pointer: fine) {
-      body { cursor: none; }
-      #cursor { display: block; }
-    }
-    @media (hover: none) or (pointer: coarse) {
-      #cursor { display: none !important; }
-    }
-
-    #cursor {
-      width: 16px; height: 16px;
-      background: var(--emerald);
-      border-radius: 50%;
-      position: fixed; top: 0; left: 0;
-      pointer-events: none; z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: all 0.2s ease;
-      mix-blend-mode: difference;
-      opacity: 0.9;
-    }
-    #cursor.hover {
-      width: 32px; height: 32px;
-      background: transparent;
-      border: 2px solid var(--emerald);
-    }
+  
 
     /* Noise Overlay */
     body::before {
